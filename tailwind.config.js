@@ -8,6 +8,9 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
+
+  darkMode: 'selector',
+
   theme: {
     colors:{
       retro:{
@@ -30,8 +33,26 @@ export default {
       'sans': ['Poppins', 'ui-sans-serif'],
       'serif': ['Merriweather', 'ui-serif']
     },
-    extend: {},
+    fontSize: {
+      d1: ['52px', '54px'],  
+      d2: ['42px', '44px'],
+      d3: ['32px', '34px'],
+      d4: ['26px', '28px'],
+      d5: ['18px', '26px']
+    },
     
+    extend: { },
+    container:{
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      }
+    }
+
   },
   plugins: [],
 }

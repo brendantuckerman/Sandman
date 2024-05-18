@@ -3,22 +3,59 @@
 @import "tailwindcss/utilities";
 
 @layer base {
+    /* Defaullts */
+
+    .dark{
+        @apply dark:bg-grey-dark bg-retro-white;
+    }
+
+    /* Typography */
     h1, 
     h2,
     h3,
     h4,
     h5,
     h6 {
-        @apply text-grey-darkest;
+        @apply text-grey-darkest dark:text-retro-white;
+    }
+
+    h1{
+        @apply text-d1 font-bold;
+    }
+
+    h2{
+        @apply text-d2 font-semibold;
+    }
+
+    h3{
+        @apply text-d3 font-medium;
+    }
+
+    h4{
+        @apply text-d4;
+    }
+
+    h5{
+        @apply text-d5;
     }
 
     p,
     span{
-        @apply text-grey-dark font-serif;
+        @apply text-grey-dark font-serif font-light dark:text-retro-white;
     }
 
     a{
-        @apply text-retro-red font-serif;
+        @apply text-retro-blue dark:text-retro-green font-serif;
     }
+
+    a:hover{
+        @apply text-retro-green dark:text-retro-red underline;
+    }
+
+    .container{
+        @apply pt-4;
+    }
+
+
 }
   
