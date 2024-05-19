@@ -1,3 +1,30 @@
+### Slingshot ###
+
+Author: Brendan Tuckerman
+Github: @brendantuckerman
+
+
+## About ##
+
+Slingshot is currently in development as an accessible frontend theme for a Nuxt project using Tailwind.
+
+Supports both light and dark mode.
+
+## Features ##
+
+* See /stylesheet for examples of the components and styling from acreoss the project
+* Typography
+* Buttons
+* Colours 
+
+## TODO ##
+
+[https://github.com/brendantuckerman/slingshot/issues]
+
+## Bugs ##
+
+[https://github.com/brendantuckerman/slingshot/issues]
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

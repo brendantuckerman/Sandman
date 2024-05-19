@@ -1,6 +1,6 @@
 <template>
     <div class="toggle-switch" @click="toggleMode">
-      <div class="switch" :class="{ active: isDarkMode }">Toggle</div>
+      <a class=" button button-toggle switch" :class="{ active: isDarkMode }">Toggle</a>
     </div>
   </template>
 

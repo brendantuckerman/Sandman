@@ -1,12 +1,17 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "./inputs";
 
 @layer base {
     /* Defaullts */
 
     .dark{
-        @apply dark:bg-grey-dark bg-retro-white;
+        @apply dark:bg-grey-dark;
+    }
+
+    body{
+        @apply bg-retro-white;
     }
 
     /* Typography */
@@ -41,15 +46,18 @@
 
     p,
     span{
-        @apply text-grey-dark font-serif font-light dark:text-retro-white;
+        @apply text-grey-dark font-serif font-light;
+        @apply dark:text-retro-white;
     }
 
     a{
-        @apply text-retro-blue dark:text-retro-green font-serif;
+        @apply text-retro-blue font-serif;
+        @apply dark:text-retro-green;
     }
 
     a:hover{
-        @apply text-retro-green dark:text-retro-red underline;
+        @apply text-retro-green underline;
+        @apply dark:text-retro-red;
     }
 
     .container{

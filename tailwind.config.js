@@ -25,7 +25,7 @@ export default {
         darkest:'#212529',
         dark:'#343a40',
         default: '#495057',
-        light: '#6c757d',
+        light:  '#8F9999',
         lightest: '#adb5bd'
       }
     },
