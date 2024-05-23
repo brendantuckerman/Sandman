@@ -1,14 +1,26 @@
 <template>
-    <div class="toggle-switch" @click.stop="toggleMode"  tabindex="0">
-      <a class=" button button-toggle switch">
-        <font-awesome-icon :icon="['fas', 'moon']" v-if="!isDarkMode" />
-        <font-awesome-icon icon="fa-solid fa-sun" v-else />
+    <div 
+        class="toggle-switch" 
+        @click="toggleMode" 
+        @keyup.enter="toggleMode" 
+        tabindex="0"
+        role="button"
+        aria-label="Toggle Dark Mode"
+    >
+      <a class="button button-toggle switch">
+         <div v-if="isDarkMode">
+            <font-awesome-icon icon="fa-solid fa-sun" />
+         </div>
+         <div v-else-if="!isDarkMode">
+            <font-awesome-icon :icon="['fas', 'moon']" /> 
+        </div>
+          
     </a>
     </div>
 </template>
 
 <script >
-import { ref nextTick } from 'vue';
+import { ref } from 'vue';
 
 export default {
  data() {
@@ -27,7 +39,8 @@ export default {
 
   methods: {
     toggleMode() {
-      this.isDarkMode = !this.isDarkMode;
+       this.isDarkMode = !this.isDarkMode;
+       
     },
 
     toggleDarkClass(){
