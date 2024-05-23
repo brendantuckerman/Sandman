@@ -12,7 +12,7 @@
           <li><NuxtLink to="/stylesheet">Stylesheet</NuxtLink></li>
           <li><NuxtLink to="/about">About</NuxtLink></li>
           <li><NuxtLink to="/posts/1">Posts 1 (try posts/n)</NuxtLink></li>
-          <li><ToggleSwitch  @toggle="handleToggle"></ToggleSwitch></li>
+          <li><ToggleSwitch></ToggleSwitch></li>
         </ul>
       </nav>
      
@@ -27,15 +27,7 @@
 </div>
 </template>
 
-<script setup>
 
-// Darkmode
-const isDarkMode = ref(false);
-
-function handleToggle(mode) {
-  isDarkMode.value = mode;
-}
-</script>
 
 
 
