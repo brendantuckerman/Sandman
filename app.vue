@@ -28,11 +28,14 @@
 </template>
 
 <script setup>
+
+// Darkmode
 const isDarkMode = ref(false);
 
 function handleToggle(mode) {
   isDarkMode.value = mode;
 }
 </script>
+
 
 
