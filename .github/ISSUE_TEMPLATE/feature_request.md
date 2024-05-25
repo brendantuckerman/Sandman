@@ -20,9 +20,10 @@ A clear and concise description of any alternative solutions or features you've 
 
 **What would the acceptance criteria be?**
 
-- Feature meets any accessibility standards;
-- Feature is Dark/Light compatible;
-- List other criteria here
+[ ] Feature meets any accessibility standards;
+[ ] Feature is Dark/Light compatible;
+[ ] Mobile responsive;
+[ ] List other criteria here
 
 
 **Additional context**
