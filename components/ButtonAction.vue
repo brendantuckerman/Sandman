@@ -51,13 +51,18 @@ defineProps({
 <style scoped>
 
     button{
-        @apply p-2 rounded border border-2 border-retro-green;
+        @apply p-4 rounded-full border border-4;
+        @apply max-w-fit;
         @apply dark:text-retro-white;
         @apply hover:bg-retro-green hover:underline;
     }
 
+    .primary{
+        @apply border-retro-green bg-retro-red;
+    }
+
     .secondary{
-        @apply border-retro-red;
+        @apply border-retro-red bg-retro-green;
         @apply hover:bg-retro-red;
     } 
 

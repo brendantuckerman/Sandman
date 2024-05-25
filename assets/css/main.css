@@ -46,7 +46,7 @@
 
     p,
     span{
-        @apply text-grey-dark font-serif font-light;
+        @apply text-grey-darkest font-serif font-light;
         @apply dark:text-retro-white;
     }
 

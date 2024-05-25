@@ -1,13 +1,12 @@
 <template>
-  <div :class="{'dark': isDarkMode}">
-  <div class="container">
-    <header class="flex justify-between items-center">
+  <div class='container page-container relative min-h-screen'>
+    <header class="flex justify-between items-center pb-8">
       <div>
-        <h1>Slingshot </h1>
-        <h5> Point. Click.</h5>
+        <h1>{{ SiteName }}</h1>
+        <h5>{{ TagLine }}</h5>
       </div>
       <nav>
-        <ul class="flex justify-between items-center gap-4">
+        <ul class="hidden sm:flex justify-between items-center gap-4">
           <li><NuxtLink to="/">Home</NuxtLink></li>
           <li><NuxtLink to="/stylesheet">Stylesheet</NuxtLink></li>
           <li><NuxtLink to="/about">About</NuxtLink></li>
@@ -15,18 +14,26 @@
           <li><ToggleSwitch></ToggleSwitch></li>
         </ul>
       </nav>
-     
+
     </header>
-    <main class="container">
+    <main class="container pb-64">
       <NuxtPage />
     </main>
     <footer>
-      <h3>Footer content</h3>
+      <GlobalFooter />
     </footer>
-  </div>  
-</div>
+   
+  </div>
 </template>
 
+<script setup>
+
+// Todo put this in GlobalHeader
+const SiteName = "Slingshot";
+const TagLine = "Point. Click."
+
+
+</script>
 
 
 
