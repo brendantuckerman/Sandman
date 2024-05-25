@@ -10,12 +10,17 @@ Slingshot is currently in development as an accessible frontend theme for a Nuxt
 
 Supports both light and dark mode.
 
-## Features ##
+## Style ##
 
 * See /stylesheet for examples of the components and styling from acreoss the project
 * Typography
-* Buttons
-* Colours 
+* Colours
+
+## Components ##
+
+- Header
+- Footer
+- Buttons
 
 ## TODO ##
 
