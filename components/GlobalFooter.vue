@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-wrapper h-28 absolute bottom-0 w-screen">
+  <div class="footer-wrapper h-28 absolute bottom-0 sm:w-screen">
     <div class="grid grid-cols-2 sm:grid-cols-3 sm:grid-rows-2">
       <nav>
         <ul>

@@ -1,10 +1,18 @@
 <template>
   <div class='container page-container relative min-h-screen'>
-    <header class="flex justify-between items-center pb-8">
-      <div>
-        <h1>{{ SiteName }}</h1>
-        <h5>{{ TagLine }}</h5>
-      </div>
+    <header class="flex justify-between items-center pb-8 h-40">
+      <div class="site-branding-container flex gap-4">
+        <div class="color-box overflow-hidden grid grid-cols-4 gap-1 -skew-y-[15deg] w-12">
+            <div class="bg-retro-red h-full"></div>
+            <div class="bg-retro-blue dark:bg-retro-white h-full"></div>
+            <div class="bg-retro-green h-full"></div>
+            <div class="bg-retro-yellow h-full"></div>
+        </div>
+        <div>
+          <h1>{{ SiteName }}</h1>
+          <h5>{{ TagLine }}</h5>
+        </div>
+    </div>
       <nav>
         <ul class="hidden sm:flex justify-between items-center gap-4">
           <li><NuxtLink to="/">Home</NuxtLink></li>

@@ -1,4 +1,5 @@
 <template>
+    <div class="stylesheet-container flex flex-col items-center">
     <h2>Stylesheet</h2>
     <p>Contents</p>
     <ul>
@@ -9,7 +10,8 @@
         <li><a href="/stylesheet/widgets">Widgets</a></li>
     </ul>
 
-    <div class="stylesheet-container flex flex-col gap-4 py-4">
+    <div class="stylesheet-content-container flex flex-col gap-4 py-4">
         <NuxtPage /> 
+    </div>
     </div>
 </template>
