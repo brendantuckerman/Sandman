@@ -14,8 +14,9 @@
         </div>
     </div>
       <nav>
-        <ul class="hidden sm:flex justify-between items-center gap-4">
+        <ul class="hidden sm:flex justify-between items-center gap-8">
           <li><NuxtLink to="/">Home</NuxtLink></li>
+          <li><NuxtLink to="/about">Example Page</NuxtLink></li>
           <li><NuxtLink to="/stylesheet">Stylesheet</NuxtLink></li>
           <li><NuxtLink to="/about">About</NuxtLink></li>
           <li><NuxtLink to="/posts/1">Posts 1 (try posts/n)</NuxtLink></li>
@@ -28,7 +29,7 @@
       <NuxtPage />
     </main>
     <footer>
-      <GlobalFooter />
+      <TheFooter />
     </footer>
    
   </div>
@@ -37,7 +38,7 @@
 <script setup>
 
 // Todo put this in GlobalHeader
-const SiteName = "Slingshot";
+const SiteName = "Sandman";
 const TagLine = "Point. Click."
 
 

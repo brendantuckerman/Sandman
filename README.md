@@ -1,4 +1,4 @@
-### Slingshot ###
+### Sandman Theme for Nuxt ###
 
 Author: Brendan Tuckerman
 Github: @brendantuckerman
@@ -6,7 +6,7 @@ Github: @brendantuckerman
 
 ## About ##
 
-Slingshot is currently in development as an accessible frontend theme for a Nuxt project using Tailwind.
+Sandman is currently in development as an accessible frontend theme for a Nuxt project using Tailwind.
 
 Supports both light and dark mode.
 

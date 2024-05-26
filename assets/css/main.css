@@ -45,7 +45,8 @@
     }
 
     p,
-    span{
+    span,
+    li{
         @apply text-grey-darkest font-serif font-light;
         @apply dark:text-retro-white;
     }

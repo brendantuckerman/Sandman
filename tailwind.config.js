@@ -34,6 +34,10 @@ export default {
       'serif': ['Merriweather', 'ui-serif']
     },
     fontSize: {
+      //Defaults
+      xs: ['12px', '16px'],
+      sm: ['14px', '20px'],
+      //Headings
       d1: ['52px', '54px'],  
       d2: ['42px', '44px'],
       d3: ['32px', '34px'],
