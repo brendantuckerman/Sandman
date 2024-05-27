@@ -1,6 +1,6 @@
 <template>
   <div class="footer-wrapper h-28">
-    <div class=" border-t-[1px] border-retro-blue grid grid-cols-2 gap-2 sm:grid-cols-3 sm:grid-rows-2 text-sm justify-center items-center justify-items-center py-4">
+    <div class=" border-t-[1px] border-retro-blue dark:border-retro-yellow grid grid-cols-2 gap-2 sm:grid-cols-3 sm:grid-rows-2 text-sm justify-center items-center justify-items-center py-4">
       <nav>
         <ul class="flex flex-col gap-4">
           <li v-for="link in links" :key="link.id"><a :href="link.href">{{ link.text }}</a></li>

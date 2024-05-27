@@ -52,7 +52,7 @@
     }
 
     a{
-        @apply text-retro-blue font-serif;
+        @apply text-retro-blue font-serif font-normal;
         @apply dark:text-retro-green;
     }
 

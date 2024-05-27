@@ -6,7 +6,7 @@
           :name="name"
           :aria-label="ariaLabel"
           :aria-describedby="ariaDescribedby"
-          :class="[size, borderColor]"
+          :class="[btnClasses, btnstyle]"
         >
             <slot>
                 {{ text }}
@@ -17,10 +17,9 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 
-defineProps({
+const props = defineProps({
   text: {
     type: String,
-    required: true,
     default: 'Click here!',
   },
   type: {
@@ -41,19 +40,31 @@ defineProps({
     type: String as PropType<'small' | 'medium' | 'large'>,
     default: 'medium',
   },
-  borderColor: {
+  btnshape:{
+      type: String as PropType<'round' | 'pill' >,
+      default: 'round' 
+  },
+
+  btnstyle: {
     type: String as PropType<'primary' | 'secondary'>,
     default: 'primary',
   },
+
 });
+
+const btnClasses = computed(() => ({
+    //Apply correct tailwind classes for button props
+    'rounded-full w-20 h-20': props.btnshape  === 'round',
+    'rounded-full min-w-24': props.btnshape === 'pill',
+
+
+}))
 </script>
 
 <style scoped>
 
     button{
-        @apply p-4 rounded-full border border-4;
-        @apply max-w-fit;
-        @apply dark:text-retro-white;
+        @apply p-4 border border-4;
         @apply hover:bg-retro-green hover:underline;
     }
 
