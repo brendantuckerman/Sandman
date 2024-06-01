@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>Buttons & Inputs</h3>
+    <h4>Buttons</h4>
       <div class="py-4 grid grid-cols-2 gap-16 items-center justify-center">
         <div>
           <h5>Primary Round</h5>
@@ -33,12 +34,14 @@
               btnshape="pill"
             >
             </ButtonAction>
-        </div>
-              
-                
-              
-                    
+          </div>  
                 
       </div>
+      <div>
+        
+        <h4>Inputs</h4>
+
+      </div>
+
   </div>
 </template>

@@ -24,7 +24,7 @@ import { ref } from 'vue';
 export default {
   data() {
     return {
-      isDarkMode: ref(false),
+      isDarkMode: ref(false)
     };
   },
   
@@ -39,13 +39,31 @@ export default {
        this.isDarkMode = !this.isDarkMode; 
     },
 
+    getUserDefault(){
+
+      const userPref =  true;
+      if (userPref){
+        //if it is dark
+        this.isDarkMode = true;
+        document.body.classList.add("dark");
+        return true;
+      }
+    }, 
+
     toggleDarkClass(){
         if(this.isDarkMode){
             document.body.classList.add("dark");
         } else{
             document.body.classList.remove("dark");
         }
+    },
+
+    mounted(){
+      return this.getUserDefault;
     }
+    
   },
+
+
 };
 </script>

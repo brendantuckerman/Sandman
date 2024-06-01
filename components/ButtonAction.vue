@@ -57,7 +57,6 @@ const btnClasses = computed(() => ({
     'rounded-full w-20 h-20': props.btnshape  === 'round',
     'rounded-full min-w-24': props.btnshape === 'pill',
 
-
 }))
 </script>
 

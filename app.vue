@@ -1,6 +1,6 @@
 <template>
   <div class="container page-container relative min-h-screen">
-    <header class="flex justify-between items-center pb-8 h-40">
+    <header class="flex justify-between items-center absolute left-0  w-full pb-8 pt-4 z-50 border-b-2 border-dashed border-retro-yellow ">
       <div class="site-branding-container flex gap-4">
         <div class="color-box overflow-hidden grid grid-cols-4 gap-1 -skew-y-[15deg] w-12">
             <div class="bg-retro-red h-full"></div>
@@ -25,7 +25,7 @@
       </nav>
 
     </header>
-    <main class="container pb-64">
+    <main class="container pb-64 pt-44 sm:px-40">
         <NuxtPage />
     </main>
     <footer>
@@ -39,7 +39,8 @@
 
 // Todo put this in GlobalHeader
 const SiteName = "Sandman";
-const TagLine = "Point. Click."
+const TagLine = "Beach. <body>"
+
 
 
 </script>
