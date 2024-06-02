@@ -5,41 +5,76 @@
       <div class="py-4 grid grid-cols-2 gap-16 items-center justify-center">
         <div>
           <h5>Primary Round</h5>
-            <ButtonAction 
+            <InputButton 
               text="Stop"                   
             >
-            </ButtonAction>
+            </InputButton>
         </div>
         <div>
           <h5>Secondary Round</h5>
-            <ButtonAction 
+            <InputButton 
               btnstyle="secondary"
               text="Start"
             >
-            </ButtonAction>
+            </InputButton>
         </div>
         <div>
           <h5>Primary Pill</h5>
-          <ButtonAction 
+          <InputButton 
               text="Stop"
               btnshape="pill"
             >
-            </ButtonAction>
+            </InputButton>
         </div>
         <div>
           <h5>Secondary Pill</h5>
-          <ButtonAction 
+          <InputButton 
               btnstyle="secondary"
               text="Start"
               btnshape="pill"
             >
-            </ButtonAction>
+            </InputButton>
           </div>  
                 
       </div>
       <div>
         
         <h4>Inputs</h4>
+        <div class="py-4 grid grid-cols-2 gap-16 items-center justify-center">
+          <InputText
+            labelText="Text (Default)"
+            isType="text"
+          >
+          </InputText>
+          
+          <InputText
+            labelText="Email"
+            isType="email"
+          >
+          </InputText>
+          
+          <InputText
+            labelText="Password"
+            isType="password"
+          >
+          </InputText>
+          
+          <InputText
+            labelText="URL"
+            isType="url"
+          >
+          </InputText>
+          
+          <InputText
+            labelText="Telephone"
+            isType="tel"
+          >
+          </InputText>
+
+          <InputSearch>
+          </InputSearch>
+          
+        </div>
 
       </div>
 

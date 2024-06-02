@@ -1,4 +1,4 @@
-<!-- Button for performing action -->
+<!-- Button Template -->
 <template>  
         <button 
           :type="type"
