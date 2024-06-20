@@ -21,7 +21,7 @@
     h4,
     h5,
     h6 {
-        @apply text-grey-darkest dark:text-retro-white;
+        @apply text-grey-darkest dark:text-retro-white mb-4;
     }
 
     h1{
@@ -47,12 +47,12 @@
     p,
     span,
     li{
-        @apply text-grey-darkest font-serif font-light;
+        @apply text-grey-darkest font-sans-minor font-light;
         @apply dark:text-retro-white;
     }
 
     a{
-        @apply text-retro-blue font-serif font-normal;
+        @apply text-retro-blue font-sans-minor font-normal;
         @apply dark:text-retro-green;
     }
 

@@ -31,7 +31,8 @@ export default {
     },
     fontFamily: {
       'sans': ['Poppins', 'ui-sans-serif'],
-      'serif': ['Merriweather', 'ui-serif']
+      'sans-minor': ['Ubuntu', 'ui-sans-serif'],
+      'serif': ['Merriweather', 'ui-serif'],
     },
     fontSize: {
       //Defaults

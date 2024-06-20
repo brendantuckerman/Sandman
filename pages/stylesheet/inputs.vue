@@ -1,16 +1,16 @@
 <template>
-  <div>
+  <div class="flex flex-col justify-center items-center pt-8">
     <h3>Buttons & Inputs</h3>
     <h4>Buttons</h4>
       <div class="py-4 grid grid-cols-2 gap-16 items-center justify-center">
-        <div>
+        <div class="flex flex-col justify-center items-center gap-4">
           <h5>Primary Round</h5>
             <InputButton 
               text="Stop"                   
             >
             </InputButton>
         </div>
-        <div>
+        <div class="flex flex-col justify-center items-center gap-4">
           <h5>Secondary Round</h5>
             <InputButton 
               btnstyle="secondary"
@@ -18,7 +18,7 @@
             >
             </InputButton>
         </div>
-        <div>
+        <div class="flex flex-col justify-center items-center gap-4">
           <h5>Primary Pill</h5>
           <InputButton 
               text="Stop"
@@ -26,7 +26,7 @@
             >
             </InputButton>
         </div>
-        <div>
+        <div class="flex flex-col justify-center items-center gap-4">
           <h5>Secondary Pill</h5>
           <InputButton 
               btnstyle="secondary"
@@ -37,7 +37,7 @@
           </div>  
                 
       </div>
-      <div>
+      <div class="flex flex-col justify-center items-center pt-8">
         
         <h4>Inputs</h4>
         <div class="py-4 grid grid-cols-2 gap-16 items-center justify-center">
