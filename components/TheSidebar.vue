@@ -12,21 +12,16 @@ function toggleSidebar() {
 
 <template>
   <div>
-    <div class="button" @click="toggleSidebar" @keyup.esc="toggleSidebar" tabindex="0"><div class="button" id="btn">
+    <div class="button" @click="toggleSidebar" @keyup.esc="toggleSidebar" tabindex="0">
+      <div class="button" id="btn">
         <div class="bar top"></div>
         <div class="bar middle"></div>
         <div class="bar bottom"></div>
       </div>
     </div>
-   
-    <nav>
-    <div class="nav-right hidden-xs">
-      
-    </div>
-    <!-- nav-right -->
-  </nav>
-
-
+    
+    <div class="nav-left hidden-xs"></div>
+    
     <div class="sidebar sidebar-item" :class="{ 'active': isSidebarOpen }">
       <!-- Your sidebar content goes here -->
       <ul class="flex flex-col gap-2 pt-4 text-sm sidebar-list">
@@ -63,22 +58,26 @@ main {
 }
 
 .sidebar {
-  height: 100%;
-  width: 400px;
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  right: 0;
-  background-color: #EF8354;
+  @apply bg-grey-light dark:bg-grey-dark w-44 fixed left-0 top-0 h-full;
 }
 
-.bar {
-  display: block;
-  height: 5px;
-  width: 50px;
-  background-color: #EF8354;
+.bar{
+  @apply block h-2 w-16;
   margin: 10px auto;
 }
+
+.bar.top{
+    @apply bg-retro-red;
+  }
+.bar.middle{
+    @apply bg-retro-green;
+  }
+
+  .bar.bottom{
+    @apply bg-retro-blue;
+  }
+
+ 
 
 .button {
   cursor: pointer;

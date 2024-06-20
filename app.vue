@@ -26,7 +26,13 @@
 
     </header>
     <main class="container pb-64 pt-44 sm:px-40">
+    
+      
+        
         <NuxtPage />
+
+    
+     
     </main>
     <footer>
       <TheFooter />
