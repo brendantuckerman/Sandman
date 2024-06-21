@@ -25,9 +25,9 @@
       </nav>
 
     </header>
-    <main class="container pb-64 pt-44 sm:px-40">
+    <main class="container relative pb-64 pt-44 sm:px-40">
     
-      
+        <TheSidebar />
         
         <NuxtPage />
 
@@ -50,6 +50,8 @@ const TagLine = "Beach. <body>"
 
 
 </script>
+
+
 
 
 

@@ -3,53 +3,67 @@ import { ref } from 'vue';
 
 const isSidebarOpen = ref(false);
 
+
 function toggleSidebar() {
-  console.log('Clicked');
+ 
   isSidebarOpen.value = !isSidebarOpen.value;
+
 }
+
 </script>
 
 
 <template>
-  <div>
-    <div class="button" @click="toggleSidebar" @keyup.esc="toggleSidebar" tabindex="0">
-      <div class="button" id="btn">
-        <div class="bar top"></div>
-        <div class="bar middle"></div>
-        <div class="bar bottom"></div>
-      </div>
-    </div>
-    
-    <div class="nav-left hidden-xs"></div>
-    
-    <div class="sidebar sidebar-item" :class="{ 'active': isSidebarOpen }">
-      <!-- Your sidebar content goes here -->
-      <ul class="flex flex-col gap-2 pt-4 text-sm sidebar-list">
-            <li><a href="/stylesheet/color">Colour</a></li>
-            <li><a href="/stylesheet/typography">Typography</a></li>
-            <li><a href="/stylesheet/inputs">Buttons and Inputs</a></li>
-            <li><a href="/stylesheet/widgets">Widgets</a></li>
-            <li><a href="/stylesheet/color">Colour</a></li>
-            <li><a href="/stylesheet/typography">Typography</a></li>
-            <li><a href="/stylesheet/inputs">Buttons and Inputs</a></li>
-            <li><a href="/stylesheet/widgets">Widgets</a></li>
-            <li><a href="/stylesheet/color">Colour</a></li>
-            <li><a href="/stylesheet/typography">Typography</a></li>
-            <li><a href="/stylesheet/inputs">Buttons and Inputs</a></li>
-            <li><a href="/stylesheet/widgets">Widgets</a></li>
-            <slot />
-        </ul>
+  
+    <div class="nav-left hidden-xs">
+      <div class="button absolute left-0 top-40 z-10 w-auto my-0 mx-auto cursor-pointer"  
+      :class="{'active stick-it' : isSidebarOpen }"
+      id="btn" 
+      @click="toggleSidebar" 
+      @keyup.esc="toggleSidebar" 
+      tabindex="0"
+      >
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
     </div>
   </div>
+
+
+  <aside>
+    <div class="sidebar" :class="{ 'active move-to-left': isSidebarOpen }">
+      <font-awesome-icon 
+      :icon="['fas', 'xmark']" 
+      class="fa cursor-pointer absolute right-4 top-4"
+      @click="toggleSidebar" 
+      @keyup.esc="toggleSidebar" 
+      tabindex="0"
+      
+      />
+      <!-- Your sidebar content goes here -->
+      <ul class="sidebar-list">
+        <li class="sidebar-item"><a href="/stylesheet/color" class="sidebar-anchor">Colour</a></li>
+        <li class="sidebar-item"><a href="/stylesheet/typography" class="sidebar-anchor" >Typography</a></li>
+        <li class="sidebar-item" ><a href="/stylesheet/inputs" class="sidebar-anchor">Buttons and Inputs</a></li>
+        <li class="sidebar-item"><a href="/stylesheet/widgets"class="sidebar-anchor">Widgets</a></li>
+        
+        <slot />
+      </ul>
+    </div>
+  </aside>
 </template>
+
+
+
 
 <style scoped>
 
-main {
+/* Not scoped */
+
+aside {
   z-index: 2;
   position: relative;
   height: 100%;
-  background-color: #2D3142;
   -webkit-transition: transform .7s ease-in-out;
   -moz-transition: transform .7s ease-in-out;
   -ms-transition: transform .7s ease-in-out;
@@ -57,13 +71,19 @@ main {
   transition: transform .7s ease-in-out;
 }
 
+
+
 .sidebar {
-  @apply bg-grey-light dark:bg-grey-dark w-44 fixed left-0 top-0 h-full;
+  @apply bg-grey-light dark:bg-grey-dark w-[300px] fixed left-[-300px] top-0 h-full mt-44 z-10;
+  transition: transform .7s ease-in-out;
+}
+
+.stick-it{
+  position: fixed;
 }
 
 .bar{
-  @apply block h-2 w-16;
-  margin: 10px auto;
+  @apply block h-2 w-16 my-2 mx-auto;
 }
 
 .bar.top{
@@ -73,31 +93,26 @@ main {
     @apply bg-retro-green;
   }
 
-  .bar.bottom{
-    @apply bg-retro-blue;
-  }
-
- 
+.bar.bottom{
+  @apply bg-retro-blue;
+}
 
 .button {
-  cursor: pointer;
-  display: inline-block;
-  width: auto;
-  margin: 0 auto;
-  -webkit-transition: all .7s ease;
+   -webkit-transition: all .7s ease;
   -moz-transition: all .7s ease;
   -ms-transition: all .7s ease;
   -o-transition: all .7s ease;
   transition: all .7s ease;
+  display: inline-block;
 }
 
-.nav-right {
+.nav-left {
   position: fixed;
-  right: 40px;
+  left: 40px;
   top: 20px;
 }
 
-.nav-right.visible-xs {
+.nav-left.visible-xs {
   z-index: 3;
 }
 
@@ -117,7 +132,7 @@ main {
   transition: all .7s ease;
 }
 
-.nav-right.visible-xs .active .bar {
+.nav-left.visible-xs .active .bar {
   background-color: #FFF;
   -webkit-transition: all .7s ease;
   -moz-transition: all .7s ease;
@@ -147,11 +162,11 @@ main {
 }
 
 .move-to-left {
-  -webkit-transform: translateX(-400px);
-  -moz-transform: translateX(-400px);
-  -ms-transform: translateX(-400px);
-  -o-transform: translateX(-400px);
-  transform: translateX(-400px);
+  -webkit-transform: translateX(400px);
+  -moz-transform: translateX(400px);
+  -ms-transform: translateX(400px);
+  -o-transform: translateX(400px);
+  transform: translateX(400px);
 }
 
 nav {
@@ -168,13 +183,14 @@ nav {
 }
 
 .sidebar-item {
+  
   margin: 30px 0;
   opacity: 0;
-  -webkit-transform: translateY(-20px);
-  -moz-transform: translateY(-20px);
-  -ms-transform: translateY(-20px);
-  -o-transform: translateY(-20px);
-  transform: translateY(-20px);
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  transform: translateY(20px);
 }
 
 .sidebar-item:first-child {
@@ -246,15 +262,9 @@ nav {
   width: 100%;
 }
 
-.ua {
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-}
 
 .fa {
-  font-size: 1.4em;
-  color: #EF8354;
+  font-size: 2rem;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -262,7 +272,7 @@ nav {
   transition: all 1s ease;
 }
 
-.ua:hover .fa {
+.fa:hover {
   color: #FFF;
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
@@ -283,7 +293,7 @@ nav {
 }
 
 @media (min-width: 768px) {
-  .nav-right {
+  .nav-left {
     position: absolute;
   }
   .hidden-xs {
@@ -293,17 +303,5 @@ nav {
     display: none;
   }
 }
-
-.sidebar-list{
-
-    li{
-        @apply py-4 rounded;
-    }
-
-    li:hover a {
-        @apply bg-retro-blue text-retro-yellow; 
-    }
-}
-
 
 </style>
